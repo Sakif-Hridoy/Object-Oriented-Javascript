@@ -17,5 +17,5 @@ var book = {
 console.log(book)
 book.print()
 
-// console.log('Book Name: '+ book.name);
-// console.log('Auhtor Name: ' + book['author'])// To access object property with bracket notation & property name must be in single or double quotes
+console.log('Book Name: '+ book.name);
+console.log('Auhtor Name: ' + book['author'])// To access object property with bracket notation & property name must be in single or double quotes
