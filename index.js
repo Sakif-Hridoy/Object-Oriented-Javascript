@@ -42,14 +42,68 @@
 
 // 
 
-function Book(name,author,price){
-    this.name = name;
-    this.author = author;
-    this.price = price;
+// function Book(name,author,price){
+//     this.name = name;
+//     this.author = author;
+//     this.price = price;
+// }
+
+// var book = new Book('Data Strucuture and Algorithm','Sakif Dewan','40$');
+// console.log(book.constructor)// Output of COnstructor
+// console.log(book)
+
+// var obj = {
+//     name:'Twinkle Cats',
+//     email:'Twinkle@mail.com',
+//     print:function(){
+//         console.log(this)
+//         //"this" will output the name and email in console
+//     }
+// }
+// // console.log(obj)
+// obj.print()
+
+// function myFunc(){
+//     console.log(this)
+//     function inner(){
+//         console.log(this)
+//     }
+//     inner()
+//     new inner()//OOP Theory which converts inner() into an object
+// }
+// myFunc()
+
+
+// console.log(myFunc())
+
+var obj = {
+    name:'Twinkle Cats',
+    email:'Twinkle@mail.com',
+    print:function(){
+        console.log(this)
+        
+    }
+}
+// console.log(obj)
+// obj.print()
+
+// var myName = obj.name; // put object value onto a variable and access
+// console.log(myName)
+
+
+var myPrint = function(){
+    //These will output undefined because "this" is defined inside the function,but "this" only can exist in object not in function
+    console.log(this);//This will output window object,not the "this" feature output
+    console.log('Hello ' + this.name);//Printing undefined
 }
 
-var book = new Book('Data Strucuture and Algorithm','Sakif Dewan','40$');
-console.log(book.constructor)// Output of COnstructor
-console.log(book)
+//Bind Method For access "this" properties of an object from an outiside function
+var myPrint = obj.print.bind(obj)
+
+console.log(myPrint);
+myPrint()
+
+
+
 
 
