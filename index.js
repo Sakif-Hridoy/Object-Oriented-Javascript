@@ -43,12 +43,30 @@
 function Person(name,email) {
     this.name = name;
     this.email = email;
+    //Declare a function with "this" keyword
+    this.print = function(){
+        console.log('Name : '+ this.name)
+    }
 }
 
-var p1 = new Person('Sakif Hridoy','sakifhridoy@mail.com');
+var p1 = new Person('Sakif Hridoy','sakifhridoy@mail.com');// Constructor created with object
 
 console.log(p1.name);
 console.log(p1.email);
 console.log(p1);
+
+var p1 = new Person('Sakif Hridoy','sakifhridoy@mail.com');
+var p2 = new Person('Asif Ahmed','sakif@mail.com');
+var p3 = new Person('Shakil Hasan','sakifhr@mail.com');
+
+var people = [p1,p2,p3];
+console.log(people);
+
+people.forEach(person=>{
+    console.log(person.email)
+    //Access Method of function from an object
+    person.print();
+
+})
 
 
