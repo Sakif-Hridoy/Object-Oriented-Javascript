@@ -76,33 +76,55 @@
 
 // console.log(myFunc())
 
+// var obj = {
+//     name:'Twinkle Cats',
+//     email:'Twinkle@mail.com',
+//     print:function(){
+//         console.log(this)
+        
+//     }
+// }
+// // console.log(obj)
+// // obj.print()
+
+// // var myName = obj.name; // put object value onto a variable and access
+// // console.log(myName)
+
+
+// var myPrint = function(){
+//     //These will output undefined because "this" is defined inside the function,but "this" only can exist in object not in function
+//     console.log(this);//This will output window object,not the "this" feature output
+//     console.log('Hello ' + this.name);//Printing undefined
+// }
+
+// //Bind Method For access "this" properties of an object from an outiside function
+// var myPrint = obj.print.bind(obj)
+
+// console.log(myPrint);
+// myPrint()
+
+
+
+// OOP JS
+// inside the function,"this" is printing the full object
+// SO,"this" is referencing the object,and "this" only works on js
 var obj = {
     name:'Twinkle Cats',
     email:'Twinkle@mail.com',
     print:function(){
-        console.log(this)
+        console.log(this)//This is point
         
     }
 }
-// console.log(obj)
-// obj.print()
+obj.print()
 
-// var myName = obj.name; // put object value onto a variable and access
-// console.log(myName)
+// // "This" only in the function
 
-
-var myPrint = function(){
-    //These will output undefined because "this" is defined inside the function,but "this" only can exist in object not in function
-    console.log(this);//This will output window object,not the "this" feature output
-    console.log('Hello ' + this.name);//Printing undefined
-}
-
-//Bind Method For access "this" properties of an object from an outiside function
-var myPrint = obj.print.bind(obj)
-
-console.log(myPrint);
-myPrint()
-
+// // When "This" is called inside a function only,the output will be the window,so that if "this" is declared where there is no object,it will not give the object output
+// function myFunc(){
+//     console.log(this)
+// }
+// myFunc();//This will print window object in browser console and will print terminal window? functions/methods in Terminal
 
 
 
