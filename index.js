@@ -118,13 +118,13 @@ var obj = {
 }
 obj.print()
 
-// // "This" only in the function
+// "This" only in the function
 
-// // When "This" is called inside a function only,the output will be the window,so that if "this" is declared where there is no object,it will not give the object output
-// function myFunc(){
-//     console.log(this)
-// }
-// myFunc();//This will print window object in browser console and will print terminal window? functions/methods in Terminal
+// When "This" is called inside a function only,the output will be the window,so that if "this" is declared where there is no object,it will not give the object output
+function myFunc(){
+    console.log(this)
+}
+myFunc();//This will print window object in browser console and will print terminal window? functions/methods in Terminal
 
 
 
