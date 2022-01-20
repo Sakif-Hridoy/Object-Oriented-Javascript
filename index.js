@@ -139,18 +139,58 @@
 
 /*Make a function and bind it with an object and see the result*/
 
-function add(num){
-    return this.value+num;
+// function add(num){
+//     return this.value+num;
+// }
+
+// var obj = {
+//     value:50
+// }
+
+// var binded = add.bind(obj)
+// console.log(binded(40))// 40 means parameter of the add function // output pf return this.value+num;
+
+// var person = {
+//     name:'Twinkle Cats',
+//     print:function(){
+//         setTimeout(function(){
+//             console.log('Function Called')
+//             console.log(this.name)
+//         },2000)
+//     }
+// }
+
+// console.log(person)
+// // console.log(person.print())
+
+// var person = {
+//     name:'Twinkle Cats',
+//     print:function(){
+//         // var name = this.name;
+//         setTimeout(function(){
+//             console.log('Hello, ' + this.name)
+//         },2000);
+//     }
+// }
+
+// console.log(person.print())
+
+function Person(name,age){
+    this.name = name;
+    this.age = age;
 }
 
-var obj = {
-    value:50
+
+Person.prototype.hello = function(){
+    console.log('Hello, '+ this.name)
 }
 
-var binded = add.bind(obj)
-console.log(binded(40))// 40 means parameter of the add function // output pf return this.value+num;
+var p1 = new Person('HM Barst',22);
+var p2 = new Person('Suck',30);
 
-
+console.log(p1);
+console.log(p2)
+console.log(Person.prototype);
 
 
 
