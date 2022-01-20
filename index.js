@@ -97,7 +97,7 @@
 //     console.log('Hello ' + this.name);//Printing undefined
 // }
 
-// //Bind Method For access "this" properties of an object from an outiside function
+// //Bind Method For access "this" properties of an object from outside of a function
 // var myPrint = obj.print.bind(obj)
 
 // console.log(myPrint);
@@ -108,23 +108,48 @@
 // OOP JS
 // inside the function,"this" is printing the full object
 // SO,"this" is referencing the object,and "this" only works on js
-var obj = {
-    name:'Twinkle Cats',
-    email:'Twinkle@mail.com',
-    print:function(){
-        console.log(this)//This is point
+// var obj = {
+//     name:'Twinkle Cats',
+//     email:'Twinkle@mail.com',
+//     print:function(){
+//         console.log(this)//This is point
         
-    }
-}
-obj.print()
+//     }
+// }
+// obj.print()
 
-// "This" only in the function
+// // "This" only in the function
 
-// When "This" is called inside a function only,the output will be the window,so that if "this" is declared where there is no object,it will not give the object output
-function myFunc(){
-    console.log(this)
+// // When "This" is called inside a function only,the output will be the window,so that if "this" is declared where there is no object,it will not give the object output
+// function myFunc(){
+//     console.log(this)
+// }
+// myFunc();//This will print window object in browser console and will print terminal window? functions/methods in Terminal
+
+// function book(name,author,price){
+//     this.name = name;
+//     this.author = author;
+//     this.price = price;
+
+
+// }
+
+// var book = new book('Functional Js','Christen','48$')
+// console.log(book)
+
+/*Make a function and bind it with an object and see the result*/
+
+function add(num){
+    return this.value+num;
 }
-myFunc();//This will print window object in browser console and will print terminal window? functions/methods in Terminal
+
+var obj = {
+    value:50
+}
+
+var binded = add.bind(obj)
+console.log(binded(40))// 40 means parameter of the add function // output pf return this.value+num;
+
 
 
 
